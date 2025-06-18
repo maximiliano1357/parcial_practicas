@@ -1,0 +1,330 @@
+/* Estilos generales */
+body {
+    font-family: 'Bahnschrift SemiBold ', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+    background-color: #021052;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Sección principal */
+.h1{
+background-color: #a8a2f1;
+}
+.hero {
+    background-color: #a8a2f1;
+    padding: 40px;
+    text-align: center;
+}
+
+.hero h2 {
+    margin: 50;
+    font-size: 2.5em;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+.cta {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #021052;
+    color: white;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.cta:hover {
+    background-color: #1601fa;
+}
+
+/* Sección sobre nosotros */
+.about {
+    padding: 40px;
+    background-color: #a8a2f1;
+    text-align: center;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+    color:rgb(0, 0, 0);
+    
+
+}
+
+/* Sección de gorras */
+.caps {
+    padding: 40px;
+    background-color: #a8a2f1;
+    text-align: center;
+}
+
+.caps h2 {
+    margin-bottom: 20px;
+}
+
+.cap-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cap-item {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #021052;
+    width: 300px;
+    text-align: center;
+}
+
+.cap-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.cap-item h3 {
+    margin: 10px 0;
+}
+
+/* Sección de contacto */
+.contact {
+    padding: 40px;
+    background-color: #a8a2f1;
+    text-align: center;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #021052;
+
+}
+.contact form button {
+    padding: 10px 20px;
+    background-color: #021052;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.contact form button:hover {
+    background-color: #021052;
+}
+
+/* Pie de página */
+footer {
+    background-color: #021052;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Centra el contenido dentro de .product-details */
+.product-details {
+    text-align: center;
+    margin-bottom: 20px; /* Añade un poco de espacio entre secciones */
+}
+
+/* Establece un tamaño fijo para todas las imágenes */
+.product-details img {
+    width: 300px; /* Ajusta el tamaño de las imágenes según tus necesidades */
+    height: auto; /* Mantén la proporción original de las imágenes */
+    display: block;
+    margin: 0 auto; /* Centra las imágenes horizontalmente */
+}
+
+/* Opcional: Estilo del enlace de llamada a la acción (cta) */
+.cta {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #a8a2f1;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta:hover {
+    background-color: #0056b3;
+}
+/* Mejora de separación entre secciones principales */
+.hero,
+.about,
+.contact {
+    padding: 60px 20px;
+    margin-bottom: 30px; /* Espacio claro entre secciones */
+    border-bottom: 5px solid #021052; /* Línea divisoria sutil */
+    border-radius: 0 0 20px 20px; /* Bordes suaves abajo */
+}
+/* Barra superior */
+.top-bar {
+    background: #111;
+    color: #fff;
+    font-size: 14px;
+    padding: 6px 0;
+    text-align: center;
+    position: relative;
+}
+.top-links {
+    position: absolute;
+    right: 20px;
+    top: 6px;
+    font-size: 13px;
+}
+.top-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5px;
+}
+.top-links a:hover {
+    text-decoration: underline;
+}
+
+/* Header principal */
+header {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 0;
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+.logo {
+    height: 40px;
+    margin-right: 30px;
+}
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li a {
+    color: #111;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+nav ul li a:hover {
+    border-bottom: 2px solid #111;
+}
+.search-cart {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.search-cart input[type="text"] {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+}
+.cart-icon {
+    font-size: 22px;
+    cursor: pointer;
+}
+.carousel-item img {
+    max-height: 500px;
+    object-fit: cover;
+}
+.search-cart {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre el input y el carrito */
+}
+
+.search-cart input {
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.cart-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  cursor: pointer;
+}
+.product-details button:hover {
+    background: linear-gradient(135deg, #333, #5c5c5c);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .product-details button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+.item-carrito {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+  border-bottom: 1px solid #000000;
+}
+
+.item-carrito button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
