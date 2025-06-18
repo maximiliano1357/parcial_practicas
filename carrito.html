@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Carrito de Compras</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="top-bar">
+    <p>Retirá Gratis tu pedido en TOM, Galerías Pacífico y Paseo Alcorta</p>
+  </div>
+
+  <div class="main-bar">
+    <img src="https://images.vexels.com/media/users/3/207115/isolated/preview/db72ee0b472f4d5e0c3455c64d0ff45c-ilustracion-de-sombrero-de-gorra-de-pescador.png" alt="Logo" class="logo">
+    <nav class="main-nav">
+      <h1>Carrito</h1>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="Nueva_pagina.html">Gorras</a></li>
+        <li><a href="COMPRA.HTML">Seguir Comprando</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main style="padding: 20px;">
+    <h2>Tu carrito</h2>
+    <div id="carrito-container"></div>
+    <h3 id="total">Total: $0.00</h3>
+    <button onclick="vaciarCarrito()" style="margin-top: 20px;">Vaciar Carrito</button>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Gorras a la Moda. Todos los derechos reservados. Y si no te gusta, comprala igual</p>
+  </footer>
+
+  <script>
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    const container = document.getElementById("carrito-container");
+    const totalElemento = document.getElementById("total");
+
+    function mostrarCarrito() {
+      container.innerHTML = "";
+      let total = 0;
+
+      if (carrito.length === 0) {
+        container.innerHTML = "<p>El carrito está vacío.</p>";
+        totalElemento.innerText = "Total: $0.00";
+        return;
+      }
+
+      carrito.forEach((producto, index) => {
+        const div = document.createElement("div");
+        div.classList.add("item-carrito");
+
+        div.innerHTML = `
+          <img src="${producto.imagen}" alt="${producto.nombre}" width="80">
+          <h4>${producto.nombre}</h4>
+          <p>Precio: $${producto.precio.toFixed(2)}</p>
+          <button onclick="eliminarDelCarrito(${index})">Eliminar</button>
+        `;
+
+        container.appendChild(div);
+        total += producto.precio;
+      });
+
+      totalElemento.innerText = "Total: $" + total.toFixed(2);
+    }
+
+    function eliminarDelCarrito(index) {
+      carrito.splice(index, 1);
+      localStorage.setItem("carrito", JSON.stringify(carrito));
+      mostrarCarrito();
+    }
+
+    function vaciarCarrito() {
+      localStorage.removeItem("carrito");
+      carrito = [];
+      mostrarCarrito();
+    }
+
+    // Mostrar carrito al cargar la página
+    mostrarCarrito();
+  </script>
+
+</body>
+</html>
